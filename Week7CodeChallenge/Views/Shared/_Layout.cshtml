@@ -27,6 +27,19 @@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Fake Studio</p>
+
+            <div id="footerNav-wrapper">
+                <div id="footerNavbar">
+                    <ul>
+                        <li>@Html.ActionLink("Home", "Index", "Home") | </li>
+                        <li>@Html.ActionLink("About", "About", "Home") | </li>
+                        <li>@Html.ActionLink("Work", "Work", "Home") | </li>
+                        <li>@Html.ActionLink("Careers", "Careers", "Home") | </li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+
         </footer>
     </div>
 

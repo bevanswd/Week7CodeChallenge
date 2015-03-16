@@ -99,7 +99,7 @@ namespace Week7CodeChallenge.Controllers
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress(contactForm.Email); //this can be anything, as long as it's an email address
                 mail.To.Add("bevanswd@gmail.com");
-                mail.Subject = "new message from: " + contactForm.Name;
+                mail.Subject = "new message from: " + contactForm.FirstName + " " + contactForm.LastName;
                 mail.Body = contactForm.Message;
 
                 //connecting to the actual email server
@@ -110,13 +110,18 @@ namespace Week7CodeChallenge.Controllers
                 SmtpServer.Send(mail);
 
                 //redirect the user back to contact page
-                return RedirectToAction("ThankYou", "ThankYou");
+                return RedirectToAction("ThankYou", "Home");
             }
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        public ActionResult ThankYou()
+        {
 
             return View();
         }
