@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+@*
+    <h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+*@
+<div id="container" class="col-md-12">
+    <div id="contact-content">
+
+        <form id="contact-form" method="post" action="@Url.Action("Contact", "Home")">
+            <h3>Send Me a Message!</h3>
+
+            <div class="contact-content, col-md-6">
+                <label>
+                    <input name="FirstName" placeholder="First Name" type="text" tabindex="1" required>
+                </label>
+            </div>
+
+            <div class="contact-content, col-md-6">
+                <label>
+                    <input name="LastName" placeholder="Last Name" type="text" tabindex="2" required>
+                </label>
+            </div>
+
+            <div class="contact-content, col-md-6">
+                <label>
+                    <input name="Email" placeholder="Email" type="email" tabindex="3" required>
+                </label>
+            </div>
+
+            <div class="contact-content, col-md-6">
+                <label>
+                    <input name="PhoneNumber" placeholder="Phone #" type="text" tabindex="4">
+                </label>
+            </div>
+
+            <div class="contact-content, col-md-12">
+                <label>
+                    <input name="CompanyName" placeholder="Company Name" type="text" tabindex="5">
+                </label>
+            </div>
+
+            <div class="contact-content, col-md-12">
+                <label>
+                    <input name="ProjectDescription" placeholder="Project Description" type="text" tabindex="6" required>
+                </label>
+            </div>
+
+            <div class="contact-content, col-md-12">
+                <label>
+                    <textarea name="Message" placeholder="Message" tabindex="7" required></textarea>
+                </label>
+            </div>
+
+            <div class="contact-content, col-md-6">
+                <button name="submit" type="submit" id="contact-submit">Send Email</button>
+            </div>
+        </form>
+
+    </div>
+</div>

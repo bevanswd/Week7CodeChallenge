@@ -1,0 +1,124 @@
+﻿/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*****HEADER*****/
+header {
+    margin: 0 0 5px 10px;
+    width: 100%;
+    min-height: 100px !important;
+    display: inline-block;
+}
+#logo {
+    position: relative;
+    float: left;
+}
+#navbar-wrapper {
+    float: right;
+}
+#navbar {
+    position: relative;
+    z-index: 9999;
+    margin-top: 15px;
+    float: right;
+}
+#navbar li {
+    text-align: center;
+    list-style-type: none;
+    padding: 5px 10px 5px 10px;
+    display: inline;
+    background-color: blue;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 620px) {
+    #navbar {
+        margin-top: 0;
+    }
+    #navbar li {
+        width: 100px;
+        display: block;
+    }
+    #navbar-wrapper {
+        text-align: center;
+    }
+    #navbar {
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+#navbar li:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+a {
+    color: lightblue;
+}
+
+a:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+/*****HOME PAGE*****/
+/*container image*/
+#container {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.main-image {
+    width: 100%;
+    text-align: center;
+}
+
+.main-image img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+#title-container {
+    display: inline-block;
+}
+
+/*****WORK PAGE*****/
+#work-container {
+    display: inline-block;
+    text-align: center;
+}
+.work-example {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*****CAREERS PAGE*****/
+#careers-content {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+/*****CONTACT PAGE*****/
+.contact-content {
+    position: relative;
+    display: inline-block;
+    background-color: grey;
+    z-index: 100000;
+}
